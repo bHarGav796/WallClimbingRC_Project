@@ -1,0 +1,191 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="horizontal"
+    tools:context=".MainActivity" >
+
+<!--  *********** Part - 1 ***********   -->
+
+    <LinearLayout
+        android:id="@+id/firstLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:background="@drawable/round_bottom_corners">
+
+    <ImageView
+            android:id="@+id/connectionStatusLight"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:src="@drawable/circle_red"
+            android:layout_marginStart="12dp" />
+
+        <Spinner
+            android:id="@+id/pairedDevSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/retryConnectionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="CONNECT"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+
+<!-- ***********   Part - 2 ***********   -->
+
+    <ImageView
+        android:id="@+id/monitor"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/firstLayout"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/black"
+        android:src="@drawable/ic_launcher_foreground"
+        tools:layout_editor_absoluteX="43dp" />
+
+
+<!-- ***********   Part - 3 ***********   -->
+
+    <LinearLayout
+        android:id="@+id/middleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/monitor"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:gravity="end">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/btnCamToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:background="@drawable/round_buttons"/>
+
+            <TextView
+                android:id="@+id/tvCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnCamToggle"
+                android:layout_centerInParent="true"
+                android:text="Camera"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp">
+
+            <Button
+                android:id="@+id/btnFlashToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:background="@drawable/round_buttons"/>
+
+            <TextView
+                android:id="@+id/tvFlash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnFlashToggle"
+                android:layout_centerInParent="true"
+                android:text="Flash"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <!-- ***********   Part - 4 ***********   -->
+
+    <ImageButton
+        android:id="@+id/btnStop"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/stop"
+        android:layout_below="@id/btnUp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <ImageButton
+        android:id="@+id/btnUp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="35dp"
+        android:layout_below="@id/middleLayout"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/letter_w"
+        android:layout_marginBottom="15dp"/>
+
+    <ImageButton
+        android:id="@+id/btnDown"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/btnStop"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/letter_s"
+        android:layout_marginTop="15dp"/>
+
+    <ImageButton
+        android:id="@+id/btnLeft"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/btnUp"
+        android:layout_toStartOf="@id/btnStop"
+        android:layout_centerVertical="true"
+        android:background="@drawable/letter_a"
+        android:layout_marginEnd="15dp"/>
+
+    <ImageButton
+        android:id="@+id/btnRight"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/btnUp"
+        android:layout_toEndOf="@id/btnStop"
+        android:layout_centerVertical="true"
+        android:background="@drawable/letter_d"
+        android:layout_marginStart="15dp"/>
+
+
+<!-- ***********   Part - 4 ***********   -->
+
+    <ImageButton
+        android:id="@+id/btnFanToggle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/fan"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"/>
+
+</RelativeLayout>
